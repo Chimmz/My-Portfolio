@@ -1,0 +1,88 @@
+section#about-me {
+   margin-top: -25vh;
+   background-color: $color-white;
+   text-align: center;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+   padding: 30rem 4rem;
+   padding-top: calc(25vh + 10rem);
+   position: relative;  // for z-index to work
+   overflow: hidden;
+   z-index: 4; // higher than the my-skills section
+
+   & .who-am-i-first {
+      max-width: 40ch;
+      margin: 0 auto;
+      position: relative;
+
+      &::before {
+         content: '';
+         position: absolute;
+         bottom: 110%;
+         left: 105%;
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         transform: scale(19) translateX(2rem);
+         transform-origin: top;
+         background: #f9fafc;
+         opacity: 0;
+         transition: transform 1s;
+         z-index: -1;
+      }
+      &:hover::before {
+         opacity: 1;
+         transform: scale(20) translateX(0);
+      }
+   }
+
+   & .who-am-i-second {
+      max-width: 40ch;
+      margin: 0 auto;
+   }
+}
+
+section#myskills {
+   margin-top: -25rem;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+   background: $color-gray-lightest;
+   text-align: center;
+   position: relative;
+   z-index: 3;
+   padding: 30rem 6rem;
+   // padding-bottom: 30rem;
+
+   & .myskills__list {
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
+      grid-column-gap: 2rem;
+      grid-row-gap: 5rem;
+   }
+}
+
+section#myexperience {
+   margin-top: -27rem;
+   background: $color-white;
+   text-align: center;
+   padding: 25rem 2rem;
+   z-index: 5;
+
+   & .allexperiences {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, auto));
+      gap: 6rem;
+      justify-content: center;
+   }
+}
+
+
+section#myprojects {
+   height: 75vh;
+   margin-top: -25rem;
+   background: #fff;
+   text-align: center;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+   padding: 30rem 6rem;
+}

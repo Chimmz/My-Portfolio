@@ -1,0 +1,110 @@
+.header {
+   height: 100vh;
+   position: relative;
+   z-index: 5;
+
+   &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+         106deg,
+         $color-primary-dark 12%,
+         $color-primary 60%,
+         $color-primary-bright 90%
+      );
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+   }
+
+   &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 4rem;
+      // background: rgba(#fff, 0.1);
+   }
+
+   &__logo {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 3px;
+      background: $color-white;
+      margin-right: auto;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 2rem;
+         height: 2rem;
+         transform: translate(40%, 40%);
+         border-radius: 3px;
+         background: $color-white;
+      }
+   }
+
+   &__navlist {
+      display: flex;
+      align-items: center;
+      gap: 8rem;
+      font-size: 1.7rem;
+      color: $color-white;
+   }
+
+   &__navlink {
+      min-width: min-content;
+      padding: 1rem 0;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.4s;
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         height: 2%;
+         // background-color: rgba($color-white, .9);
+         background: $color-gray-dark;
+         width: 0%;
+         transition: width 0.4s;
+      }
+
+      &::before {
+         top: 0;
+         left: 0;
+      }
+
+      &::after {
+         right: 0;
+         bottom: 0;
+      }
+
+      &:hover {
+         color: $color-gray-dark;
+
+         &::before,
+         &::after {
+            width: 100%;
+         }
+      }
+   }
+
+   &__picture {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      background: $color-white;
+      border-radius: 6rem;
+      padding: 4.5rem;
+      transform: translateX(-50%) translateY(-25%) rotate(55deg);
+      // border: 1px solid gray;
+   }
+
+   &__photo {
+      width: 15vw;
+      height: 15vw;
+      aspect-ratio: 1;
+      transform: rotate(-55deg);
+      border-radius: 50%;
+   }
+}
