@@ -9,6 +9,13 @@
       border-radius: 1.5rem;
       overflow: hidden;
       z-index: 2;
+
+      &:hover ~ .experience__role > span{
+         transform: translateY(200%);
+      }
+      &:hover ~ .experience__role::before{
+         bottom: 50%;
+      }
    }
 
    &__photo {
@@ -17,23 +24,43 @@
    }
 
    &__role {
-      width: 80%;
+      width: 85%;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      background: $color-white;
       color: $color-secondary;
-      z-index: 2;
-      min-width: max-content;
+      padding: 2rem 6rem;
+      box-shadow: 0 2px 7px 2px rgba(0,0,0, .08);
+      border-radius: 50% 3px 50% 3px;
+      // border-radius: 990px 990px 0 0;
+      // border-radius: 7px;
       transform: translateY(-50%);
-      background: #fff;
-      padding: 1.5rem 3rem;
-      margin: 0 auto;
-      border-radius: 50% 2px 50% 0;
-      box-shadow: 0 0 7px rgba(0,0,0, .2);
+      overflow: hidden;
+      z-index: 2;
+      position: relative;
+
+      & > span {
+         min-width: max-content;
+         transition: transform .2s;
+      }
+
+      &::before {
+         content: attr(data-role);
+         position: absolute;
+         bottom: 120%;
+         transform: translateY(50%);
+         min-width: max-content;
+         color: $color-primary-dark;
+         transition: bottom .2s;
+      }
    }
 
    &__description {
-      margin-top: -1rem;
-      font-size: 1.37rem;
+      margin-top: -.5rem;
+      font-size: 1.5rem;
       font-weight: 500;
-      line-height: 2.2rem !important;
+      line-height: 2.5rem !important;
       color: $color-gray-dark;
       text-align: left;
    }
@@ -41,9 +68,9 @@
    &__duration {
       align-self: flex-end;
       width: max-content;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 500;
       border-radius: 3px;
-      color: rgb(197, 197, 197);
+      color: rgb(182, 182, 182);
    }
 }

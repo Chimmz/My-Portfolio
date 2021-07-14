@@ -8,26 +8,25 @@ a {
 .btn {
    font: inherit;
    font-size: $default-fsize;
-   padding: 1.2em 2.2em;
+   padding: 1.3em 2.2em;
    border-radius: 999px;
    border: none;
    transition: all .3s;
 
-   &:active, &:focus {
+   &:hover, &:active, &:focus {
       outline: none;
-   }
-
-   &:hover {
       cursor: pointer;
+      box-shadow: 0 5px 20px 2px rgba(#000, .12);
       transform: translateY(-7px);
    }
 
    &-gradient {
       color: $color-white;
-      background: linear-gradient(120deg, $color-primary-dark 20%, $color-primary-bright 80%);
+      background: linear-gradient(120deg, $color-primary-bright 30%, $color-primary-dark 100%);
       display: flex;
       align-items: center;
       justify-content: center;
+      // box-shadow: 0 5px 10px 2px rgba(#000, .12);
       overflow: hidden;
       position: relative;
 
@@ -43,25 +42,27 @@ a {
          transition: all .3s;
       }
 
-      &:hover::before {
-         opacity: 1;
-         transform: scale(10)
+      &:hover {
+         
+
+         &::before {
+            opacity: 1;
+            transform: scale(10)
+         }
       }
    }
 
    &-white {
       background: $color-white;
       color: $color-primary-dark;
-      box-shadow: 0 0 30px 1px rgba(#000, .15);
    }
 
    &-round {
-      // width: 4.5rem;
-      // height: 4.5rem;
       display: inline-grid;
       place-items: center;
       font-size: 3rem;
       padding: 1.5rem;
+      box-shadow: 0 0 30px 2px rgba(#000, .12) !important;
       border-radius: 50% !important;
       z-index: 100;
    }

@@ -1,6 +1,6 @@
 .heading-1 {
   font-family: "Abril Fatface", sans-serif;
-  font-size: 7rem;
+  font-size: 8rem;
   word-spacing: 1rem;
   color: #7c7c7c;
   color: #303030;
@@ -55,37 +55,38 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.no-bullets {
+.u-no-bullets {
   list-style: none;
 }
 
-.text-center {
+.u-text-center {
   text-align: center !important;
 }
 
-.btn-center {
+.u-btn-center {
   display: block;
   margin: 0 auto;
 }
 
-.text-primary {
+.u-text-primary {
   color: #82cea9 !important;
 }
 
-.mgb-sm {
+.u-mgb-sm {
   margin-bottom: 1.5rem !important;
 }
 
-.mgb-md {
+.u-mgb-md {
   margin-bottom: 3rem !important;
 }
 
-.mgb-lg {
-  margin-bottom: 8rem !important;
+.u-mgb-lg {
+  margin-bottom: 10rem !important;
 }
 
 .header {
   height: 100vh;
+  padding: 2rem 6rem;
   position: relative;
   z-index: 5;
 }
@@ -100,7 +101,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 4rem;
+  flex-wrap: wrap;
 }
 .header__logo {
   width: 2rem;
@@ -122,12 +123,12 @@ body {
 .header__navlist {
   display: flex;
   align-items: center;
-  gap: 8rem;
+  gap: 5vw;
   font-size: 1.7rem;
   color: #fff;
 }
 .header__navlink {
-  min-width: min-content;
+  min-width: max-content;
   padding: 1rem 0;
   cursor: pointer;
   position: relative;
@@ -164,9 +165,28 @@ body {
   padding: 4.5rem;
   transform: translateX(-50%) translateY(-25%) rotate(55deg);
 }
+.header__picture::before, .header__picture::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 34;
+}
+.header__picture::before {
+  width: 1rem;
+  height: 1rem;
+  left: -10%;
+  top: 90%;
+}
+.header__picture::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -15%;
+  right: 10%;
+}
 .header__photo {
-  width: 15vw;
-  height: 15vw;
+  width: 20rem;
+  height: 20rem;
   aspect-ratio: 1;
   transform: rotate(-55deg);
   border-radius: 50%;
@@ -177,8 +197,7 @@ section#about-me {
   background-color: #fff;
   text-align: center;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-  padding: 30rem 4rem;
-  padding-top: calc(25vh + 10rem);
+  padding: calc(25vh + 10rem) 4rem 30rem;
   position: relative;
   overflow: hidden;
   z-index: 4;
@@ -214,12 +233,13 @@ section#about-me .who-am-i-second {
 
 section#myskills {
   margin-top: -25rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   background: #f7f7f7;
   text-align: center;
   position: relative;
   z-index: 3;
   padding: 30rem 6rem;
+  padding-bottom: 40rem;
 }
 section#myskills .myskills__list {
   margin: 0 auto;
@@ -232,11 +252,12 @@ section#myskills .myskills__list {
 }
 
 section#myexperience {
-  margin-top: -27rem;
+  margin-top: -30rem;
   background: #fff;
   text-align: center;
-  padding: 25rem 2rem;
   z-index: 5;
+  padding: 35rem 6rem;
+  padding-bottom: 10rem;
 }
 section#myexperience .allexperiences {
   display: grid;
@@ -247,11 +268,9 @@ section#myexperience .allexperiences {
 
 section#myprojects {
   height: 75vh;
-  margin-top: -25rem;
   background: #fff;
   text-align: center;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-  padding: 30rem 6rem;
 }
 
 a {
@@ -264,21 +283,20 @@ a {
 .btn {
   font: inherit;
   font-size: 1.8rem;
-  padding: 1.2em 2.2em;
+  padding: 1.3em 2.2em;
   border-radius: 999px;
   border: none;
   transition: all 0.3s;
 }
-.btn:active, .btn:focus {
+.btn:hover, .btn:active, .btn:focus {
   outline: none;
-}
-.btn:hover {
   cursor: pointer;
+  box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.12);
   transform: translateY(-7px);
 }
 .btn-gradient {
   color: #fff;
-  background: linear-gradient(120deg, #82cea9 20%, #64ebaa 80%);
+  background: linear-gradient(120deg, #64ebaa 30%, #82cea9 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,13 +321,13 @@ a {
 .btn-white {
   background: #fff;
   color: #82cea9;
-  box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.15);
 }
 .btn-round {
   display: inline-grid;
   place-items: center;
   font-size: 3rem;
   padding: 1.5rem;
+  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.12) !important;
   border-radius: 50% !important;
   z-index: 100;
 }
@@ -330,18 +348,19 @@ a {
 .skill__circle::after {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: #f4f4f4;
   border-radius: 50%;
-  z-index: -1;
+  z-index: -2;
   transition: transform 0.2s;
 }
-.skill__circle:hover::after {
-  transform: translate(-50%, -50%) scale(1);
+.skill__circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  transform: scale(0.1);
+  transition: transform 0.2s;
 }
 .skill__picture {
   width: 5rem;
@@ -353,21 +372,49 @@ a {
   position: relative;
   z-index: 2;
 }
+.skill__name {
+  font-size: 1.5rem;
+  color: #000;
+}
+.skill--show-circle .skill__circle::after {
+  transform: scale(1);
+}
 .skill[skillname*=Redux] .skill__logo, .skill[skillname*=Figma] .skill__logo {
   transform: scale(1.9);
+}
+.skill[skillname*=Redux]:hover .skill__circle::after {
+  background: #ffeeff;
+}
+.skill[skillname*=React]:hover .skill__circle::after {
+  background: #e3f8ff;
+}
+.skill[skillname*=JavaScript]:hover .skill__circle::after {
+  background: #ebebeb;
+}
+.skill[skillname*=Sass]:hover .skill__circle::after {
+  background: #ffecf5;
+}
+.skill[skillname*=MongoDB]:hover .skill__circle::after {
+  background: #d9ffd6;
+}
+.skill[skillname*=Figma]:hover .skill__circle::after {
+  background: #ffede6;
+}
+.skill[skillname*=HTML]:hover .skill__circle::after {
+  background: linear-gradient(137.08deg, #DCE3FF 5.58%, #FFF3EE 108.84%);
+}
+.skill[skillname*=Node]:hover .skill__circle::after {
+  background: linear-gradient(149.16deg, #D9FFD6 14.67%, #F0F0F0 88.46%);
 }
 .skill[skillname*=MongoDB] .skill__logo, .skill[skillname*=Node] .skill__logo {
   transform: scale(1.5);
 }
 .skill[skillname*=HTML] .skill__logo {
   transform: scale(1.5);
+  background: linear-gradient(to right, #FFF3EE 5.58%, #DCE3FF 108.84%) !important;
 }
-.skill__name {
-  font-size: 1.5rem;
-  color: #7c7c7c;
-}
-.skill:hover .skill__name {
-  color: #000;
+.skill[skillname*=Node] .skill__logo {
+  transform: scale(1.7);
 }
 
 .experience {
@@ -382,37 +429,59 @@ a {
   overflow: hidden;
   z-index: 2;
 }
+.experience__picture:hover ~ .experience__role > span {
+  transform: translateY(200%);
+}
+.experience__picture:hover ~ .experience__role::before {
+  bottom: 50%;
+}
 .experience__photo {
   width: 100%;
   height: 100%;
 }
 .experience__role {
-  width: 80%;
-  color: #AD9643;
-  z-index: 2;
-  min-width: max-content;
-  transform: translateY(-50%);
+  width: 85%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
   background: #fff;
-  padding: 1.5rem 3rem;
-  margin: 0 auto;
-  border-radius: 50% 2px 50% 0;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  color: #AD9643;
+  padding: 2rem 6rem;
+  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 50% 3px 50% 3px;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+.experience__role > span {
+  min-width: max-content;
+  transition: transform 0.2s;
+}
+.experience__role::before {
+  content: attr(data-role);
+  position: absolute;
+  bottom: 120%;
+  transform: translateY(50%);
+  min-width: max-content;
+  color: #82cea9;
+  transition: bottom 0.2s;
 }
 .experience__description {
-  margin-top: -1rem;
-  font-size: 1.37rem;
+  margin-top: -0.5rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 2.2rem !important;
+  line-height: 2.5rem !important;
   color: #8f8f8f;
   text-align: left;
 }
 .experience__duration {
   align-self: flex-end;
   width: max-content;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 500;
   border-radius: 3px;
-  color: #c5c5c5;
+  color: #b6b6b6;
 }
 
 /*# sourceMappingURL=style.css.map */
