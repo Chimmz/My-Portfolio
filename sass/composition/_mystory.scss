@@ -1,0 +1,23 @@
+.mystory {
+   margin-inline: auto;
+   width: 100%;
+
+   &__img {
+      width: 30vw;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      float: left;
+      shape-outside: circle(50% at 50%);
+      margin-right: 6rem;
+      margin-bottom: 1rem;
+
+      @include respond(phone) {
+         margin-right: 3rem;
+         margin-bottom: 1rem;
+      }
+   }
+
+   & .parag {
+      max-width: 90ch !important;
+   }
+}

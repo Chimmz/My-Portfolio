@@ -1,0 +1,115 @@
+.header {
+   height: 100vh;
+   padding: 3rem 6.5rem;
+   position: relative;
+   z-index: 5;
+
+   &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+         106deg,
+         $color-primary-dark 12%,
+         $color-primary 60%,
+         $color-primary 90%
+      );
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+   }
+   @media screen and (max-width: 34.375em){
+      padding-top: 7rem;
+   }
+
+   &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media screen and (max-width: 34.375em){
+         flex-direction: column;
+         justify-content: center;
+         gap: 4rem;
+      }
+   }
+
+   &__logo {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 3px;
+      background: $color-white;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 2rem;
+         height: 2rem;
+         transform: translate(40%, 40%);
+         border-radius: 3px;
+         background: $color-white;
+      }
+   }
+
+   &__navlist {
+      display: flex;
+      align-items: center;
+      gap: 5vw;
+      font-size: 1.7rem;
+      color: $color-white;
+   }
+
+   &__navlink {
+      min-width: max-content;
+      padding: 1rem 0;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.4s;
+
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         height: 2%;
+         width: 100%;
+         transform: scaleX(0);
+         transform-origin: right;
+         background: #ffe4b1;
+         transition: transform 0.4s;
+      }
+
+      &:hover {
+         color: #ffe4b1;
+
+         &::after {
+            transform: scaleX(1);
+            transform-origin: left;
+         }
+      }
+   }
+
+   &__picture {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      background: $color-gray-lightest;
+      border-radius: 6rem;
+      padding: 4.5rem;
+      transform: translateX(-50%) translateY(-25%) rotate(55deg);
+
+      @include respond(phone) {
+         padding: 4rem;
+         transform: translateX(-50%) translateY(-25%) rotate(62deg);
+      }
+   }
+
+   &__photo {
+      @include make-circle(20rem);
+      transform: rotate(-55deg); // To negate rotation effect caused by picture
+
+      @include respond(phone) {
+         @include make-circle(18rem);
+         transform: rotate(-62deg); // To negate rotation effect caused by picture at this breakpoint
+      }
+   }
+}

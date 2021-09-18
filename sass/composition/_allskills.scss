@@ -1,0 +1,17 @@
+.allskills {
+   // display: flex;
+   column-gap: 4rem;
+   row-gap: 6rem;
+   // align-items: center;
+   // align-content: center;
+   // flex-wrap: wrap;
+
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 12.5rem);
+   justify-content: center;
+
+   @include respond(phone) {
+      column-gap: 6rem;
+      row-gap: 5rem;
+   }
+}

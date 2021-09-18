@@ -1,0 +1,103 @@
+.skill {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.5rem;
+
+   &:hover &__circle::after {
+      transform: scale(1.1);
+   }
+
+   &__circle {
+      width: 12.5rem;
+      height: 12.5rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         inset: 0;
+         background: $color-white;
+         box-shadow: 0 0.45rem 1rem rgba(#000, 0.04),
+            0 1rem 4rem rgba(#000, 0.06);
+         border-radius: 50%;
+         z-index: -2;
+         transition: transform 0.5s;
+      }
+   }
+
+   &__picture {
+      width: 5rem;
+      position: relative;
+   }
+
+   &__logo {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+   }
+
+   &__name {
+      font-size: 1.5rem;
+      color: #000;
+   }
+
+   &--show-circle &__circle::after {
+      transform: scale(1);
+   }
+
+   &[skillname*='Redux'] &__logo,
+   &[skillname*='Figma'] &__logo {
+      transform: scale(1.9);
+   }
+
+   &[skillname*='Redux']:hover &__circle::after {
+      background: #f5e3f5;
+   }
+   &[skillname*='React']:hover &__circle::after {
+      background: #ddf1f8;
+   }
+   &[skillname*='JavaScript']:hover &__circle::after {
+      background: #f7df1e;
+   }
+   &[skillname*='Sass']:hover &__circle::after {
+      background: #f1dde6;
+   }
+   &[skillname*='MongoDB']:hover &__circle::after {
+      background: #c7f1c4;
+   }
+   &[skillname*='Figma']:hover &__circle::after {
+      background: #f7e5de;
+   }
+   &[skillname*='HTML']:hover &__circle::after {
+      background: linear-gradient(137.08deg, #d4dbf5 5.58%, #f7e4dc 108.84%);
+   }
+   &[skillname*='Node']:hover &__circle::after {
+      background: linear-gradient(149.16deg, #c7f1c4 14.67%, #dddddd 88.46%);
+   }
+
+   &[skillname*='MongoDB'] &__logo,
+   &[skillname*='Node'] &__logo {
+      transform: scale(1.5);
+   }
+
+   &[skillname*='HTML'] &__logo {
+      transform: scale(1.5);
+      background: linear-gradient(
+         to right,
+         #fff3ee 5.58%,
+         #dce3ff 108.84%
+      ) !important;
+   }
+
+   &[skillname*='Node'] &__logo {
+      transform: scale(1.7);
+   }
+   &[skillname*='Git'] &__logo {
+      transform: scale(1.8);
+   }
+}

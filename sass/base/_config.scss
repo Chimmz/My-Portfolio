@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: inherit;
+}
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+
+   @include respond(tab-landscape) {
+      font-size: 56.25%; // 9px
+   }
+
+   @include respond(tab-portrait) {
+      // Also applies to phone
+      font-size: 50%;
+   }
+
+   @include respond(lg-desktop) {
+      font-size: 75%;
+   }
+}
+
+body {
+   min-height: 100vh;
+   padding: 2vw;
+   font-family: 'Montserrat', sans-serif;
+   color: $color-gray-darker;
+   // color: rgb(88, 49, 49);
+   // color: #7B2A2A;
+   // color: #753737;
+
+   @include respond(tab-portrait) {
+      padding: 0;
+   }
+}
+
+::selection {
+   background-color: $color-primary-bright;
+   color: $color-white;
+}

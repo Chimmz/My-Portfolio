@@ -1,0 +1,41 @@
+.footer {
+   font-size: 1.3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: #273526;
+   color: #c2c2c2;
+   padding: 9rem 5vw;
+
+   @include respond(phone) {
+      padding-block: 8rem;
+   }
+
+   &__brand {
+      font-size: 3rem;
+      color: $color-secondary;
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+   }
+
+   &__socicons {
+      font-size: 2.3rem;
+      color: $color-primary-brighter;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4rem;
+      margin-bottom: 2.5rem;
+
+      & [class*='iconify'] {
+         transition: all 0.2s;
+      }
+
+      & a:hover [class*='iconify'] {
+         color: #fff !important;
+         transform: translateY(-1rem);
+      }
+   }
+}

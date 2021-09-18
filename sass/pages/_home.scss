@@ -1,0 +1,73 @@
+section {
+   padding: 10rem 5vw;
+   position: relative;
+   transition: transform 1.7s, opacity 1.7s;
+
+   & > .heading-2 {
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: -5px;
+         left: 50%;
+         transform: translate(-50%);
+         width: 0;
+         height: 3px;
+         border-radius: 99px;
+         background: $color-primary-bright;
+         transition: 1.8s;
+      }
+   }
+}
+
+section#about-me {
+   margin-top: -35vh;
+   padding-top: calc(25vh + 20rem);
+   padding-inline: 7vw;
+   background: $color-gray-lightest;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+   color: rgb(43, 43, 43);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 20rem;
+   overflow: hidden;
+   z-index: 2;
+
+   @include respond(tab-landscape) {
+      padding-top: calc(35vh + 16rem);
+   }
+   @include respond(tab-portrait) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+      padding-bottom: 25rem;
+   }
+   @include respond(phone) {
+      padding-top: calc(35vh + 7rem);
+   }
+
+   & .heading-1 {
+      transition: all 1s;
+   }
+
+   & .short-intro {
+      transition: all 1s 0.5s;
+   }
+}
+section#skills {
+   padding-top: 30rem;
+   // border: 1px solid black;
+   background: $color-white;
+   // background: $color-gray-light;
+   padding-inline: 3vw;
+
+   @include respond(tab-portrait) {
+      padding-top: 35rem;
+   }
+}
+
+section#projects {
+   background: $color-white;
+   padding-inline: 5vw;
+   padding-bottom: 15rem;
+}

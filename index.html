@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@100;200;300;400;500;600&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet"
+      >
+      <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+      <script src="./src/utils.js" type="module" defer></script>
+      <script src="./src/script.js" type="module" defer></script>
+      <script src="./src/header.js" type="module" defer></script>
+      <script src="./src/projects.js" type="module" defer></script>
+
+      <link rel="stylesheet" href="/css/styles.css" />
+      <title>Chima Divine | Portfolio site</title>
+   </head>
+   <body>
+      <header class="header">
+         <nav class="header__nav">
+            <span class="header__logo"></span>
+            <ul class="header__navlist u-no-bullets">
+               <li class="header__navitem">
+                  <a class="header__navlink" href="#about-me">About me</a>
+               </li>
+               <li class="header__navitem">
+                  <a class="header__navlink" href="#myskills">My skills</a>
+               </li>
+               <li class="header__navitem">
+                  <a class="header__navlink" href="#myprojects">My projects</a>
+               </li>
+            </ul>
+         </nav>
+         <div class="header__picture">
+            <img src="img/myphoto.jpg" alt="" class="header__photo" />
+         </div>
+      </header>
+      <main>
+         <section id="about-me">
+            <h1
+               class="heading-1 u-text-center u-mgb-md"
+               style="transition: transform 1s, opacity 1s">
+               Hi, I'm Chima.
+            </h1>
+            <div class="intro u-mgb-xlg" style="transition: transform 1s .5s, opacity 1s .5s;">
+               <p class="parag--bolder u-text-center" style="margin-bottom: 0.4rem;">
+                  I am a <span class="text-primary">frontend</span> web developer
+                  and designer.
+               </p>
+               <p class="parag u-text-center ">
+                  I also have some background in backend and fullstack web
+                  development.
+               </p>
+            </div>
+            <div class="mystory u-block-center u-mgb-lg">
+               <img src="/img/laptop-photo.jpg" alt="" class="mystory__img">
+               <p class="parag u-mgb-sm">
+                  I obtained a BSc. Computer Engineering in North Cyprus in the year 2021 and so, I've been coding for 4 years. I ever look forward to express my passion for the software world by solving problems using the web's hot technologies to build simple and sweet user interfaces.
+               </p>
+               <p class="parag">
+                  I'm one who loves getting familiar with the modern technologies and frameworks around the JavaScript ecosystem. One thing I always keep in mind is writing clean, readable, maintainable and efficient code.
+               </p>
+            </div>
+            <a href="#footer" class="btn btn-primary u-btn-center">Get in touch</a>
+         </section>
+
+         <section id="myskills">
+            <h2 class="heading-2 u-text-center u-mgb-lg">My Skills</h2>
+            <div class="allskills">
+               <div class="skill" skillname="HTML/CSS">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/html-css.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">HTML/CSS</span>
+               </div>
+               <div class="skill" skillname="JavaScript">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/js-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">JavaScript</span>
+               </div>
+               <div class="skill" skillname="React">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/react-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">React.js</span>
+               </div>
+               <div class="skill" skillname="Redux">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/redux-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Redux.js</span>
+               </div>
+               <div class="skill" skillname="Figma">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/figma-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">UI Design</span>
+               </div>
+               <div class="skill" skillname="Sass">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/sass-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Sass</span>
+               </div>
+               <div class="skill" skillname="Node/Express.js">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/node-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Node/Express.js</span>
+               </div>
+               <div class="skill" skillname="MongoDB">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/mongodb-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">MongoDB</span>
+               </div>
+               <div class="skill" skillname="Git">
+                  <div class="skill__circle">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           src="/img/git-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Git/GitHub</span>
+               </div>
+            </div>
+         </section>
+         <section id="myprojects">
+            <h2 class="heading-2 u-text-center u-mgb-lg">My Projects</h2>
+            <!-- <div class="myprojects"> -->
+               <div class="project">
+                  <picture class="project__tablet">
+                     <video src="/videos/helomi-video.mp4" class="project__tablet__video" muted autoplay></video>
+                  </picture>
+                  <div class="project__details">
+                     <h4 class="heading-4 u-mgb-md">Helomi</h4>
+                     <p class="parag u-mgb-sm">
+                        Helomi is a single page chat app that enables users to communicate with one another through text messaging and video calling. I built this robust MERN stack project as my final year project in college.
+                     </p>
+                     <strong class="parag">Tools and Technologies used:</strong>
+                     <p class="parag u-mgb-md">
+                        React, Redux, Sass, Nodejs, Express, MongoDB, WebRTC, Socket.io, JWT.
+                     </p>
+                     <div class="project__details__actions">
+                        <a href="https://helomi.netlify.app" target="_blac" class="btn btn-primary btn-md">View project live</a>
+                        <!-- <a href="https://github.com/Chimmz/helomi-fullstack" target="_blank" class="btn btn-white btn-md">See GitHub repo</a> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="project project--flow-reversed">
+                  <picture class="project__tablet">
+                     <video src="/videos/nisclinic-video.mp4" class="project__tablet__video" muted autoplay></video>
+                  </picture>
+                  <div class="project__details">
+                     <h4 class="heading-4 u-mgb-md">Nisclinic</h4>
+                     <p class="parag u-mgb-sm">
+                        Nisclinic is a static website template for a clinic. I built this in the company where I did my internship.
+                     </p>
+                     <strong class="parag">Tools and Technologies used:</strong>
+                     <p class="parag u-mgb-md">
+                        HTML, CSS / Sass, JavaScript.
+                     </p>
+                     <div class="project__details__actions">
+                        <a href="https://nisclinic.netlify.app" target="_blank" class="btn btn-primary btn-md">View project live</a>
+                        <a href="https://github.com/Chimmz/Nisclinic" target="_blank" class="btn btn-white btn-md">See GitHub repo</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="project">
+                  <picture class="project__tablet">
+                     <video src="/videos/dgmmc-vid.mp4" class="project__tablet__video" muted autoplay></video>
+                  </picture>
+                  <div class="project__details">
+                     <h4 class="heading-4 u-mgb-md">DGMMC</h4>
+                     <p class="parag u-mgb-sm">
+                        I built this website for an organization that conducts competitions among students annually. This site eased student registration.
+                     </p>
+                     <strong class="parag">Tools and Technologies used:</strong>
+                     <p class="parag u-mgb-md">
+                        HTML, CSS / Sass, JavaScript, Node.js, Express.
+                     </p>
+                     <div class="project__details__actions">
+                        <a href="https://dgmmc.netlify.app" target="_blank" class="btn btn-primary btn-md">View project live</a>
+                        <!-- <a href="" class="btn btn-white btn-md">See GitHub repo</a> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="project project--flow-reversed">
+                  <picture class="project__tablet">
+                     <video src="/videos/dad-jokes-vid.mp4" class="project__tablet__video" muted autoplay></video>
+                  </picture>
+                  <div class="project__details">
+                     <h4 class="heading-4 u-mgb-md">Dad Jokes</h4>
+                     <p class="parag u-mgb-sm">
+                        The Dad Jokes app is a simple app that demonstrates fetching from an external API in React. I built this when I began learning React.
+                     </p>
+                     <strong class="parag">Tools and Technologies used:</strong>
+                     <p class="parag u-mgb-md">
+                        React.
+                     </p>
+                     <div class="project__details__actions">
+                        <a href="https://dad-jokes-project.netlify.app" target="_blank" class="btn btn-primary btn-md">View project live</a>
+                        <a href="https://github.com/Chimmz/dad-jokes" target="_blank" class="btn btn-white btn-md">See GitHub repo</a>
+                     </div>
+                  </div>
+               </div>
+            <!-- </div> -->
+         </section>
+         <footer class="footer" id="footer">
+            <div class="footer__socicons">
+               <a href="https://www.linkedin.com/in/chima-divine-orji" target="_blank">
+                  <span class="iconify" data-icon="fa-brands:linkedin-in"></span>
+               </a>
+               <a href="https://github.com/Chimmz">
+                  <span class="iconify" data-icon="fa-brands:github"></span>
+               </a>
+               <a href="https://www.facebook.com/chima.endmond/" target="_blank">
+                  <span class="iconify" data-icon="fa-brands:facebook-f"></span>
+               </a>
+               <a href="https://wa.me/+905338319606" target="_blank">
+                  <span class="iconify" data-icon="fa-brands:whatsapp"></span>
+               </a>
+            </div>
+            <span class="copyr">Chima Divine. © Copyright 2021. All rights reserved.</span>
+         </footer>
+
+         <button
+            class="btn btn-round btn-white"
+            id="btn-scroll-to-top"
+            style="position: fixed; right: 2.5vw; bottom: 40px"
+         >
+            <span
+               class="iconify"
+               data-inline="false"
+               data-icon="mdi:arrow-up"
+            ></span>
+         </button>
+      </main>
+   </body>
+</html>
