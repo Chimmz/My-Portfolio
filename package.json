@@ -2,9 +2,10 @@
    "name": "My-Portfolio",
    "version": "1.0.0",
    "description": "",
-   "main": "index.js",
    "scripts": {
-      "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+      "compile:sass": "node-sass sass/main.scss css/styles.css -w",
+      "start": "parcel index.html",
+      "build": "parcel build index.html"
    },
    "repository": {
       "type": "git",
@@ -18,6 +19,8 @@
    },
    "homepage": "https://github.com/Chimmz/My-Portfolio#readme",
    "devDependencies": {
-      "node-sass": "^6.0.1"
+      "@parcel/transformer-image": "^2.0.0-rc.0",
+      "node-sass": "^6.0.1",
+      "parcel": "^2.0.0-rc.0"
    }
 }
