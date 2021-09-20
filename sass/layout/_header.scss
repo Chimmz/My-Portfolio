@@ -99,7 +99,7 @@
 
       @include respond(phone) {
          padding: 4rem;
-         transform: translateX(-50%) translateY(-25%) rotate(62deg);
+         transform: translateX(-50%) translateY(-25%) rotate(60deg);
       }
    }
 
@@ -109,7 +109,7 @@
 
       @include respond(phone) {
          @include make-circle(18rem);
-         transform: rotate(-62deg); // To negate rotation effect caused by picture at this breakpoint
+         transform: rotate(-60deg); // To negate rotation effect caused by picture at this breakpoint
       }
    }
 }

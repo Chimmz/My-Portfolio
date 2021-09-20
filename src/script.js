@@ -8,7 +8,6 @@ function init() {
       .querySelector('#btn-scroll-to-top')
       .addEventListener('click', _ => window.scrollTo(0, 0))   
 }
-init();
 
 function revealSections(entries, observer) {
    const [entry] = entries;
@@ -18,5 +17,6 @@ function revealSections(entries, observer) {
    underlineHeading(target, isIntersecting)
 }
 
+init();
 const sectionObserver = new IntersectionObserver(revealSections, getObserverOptions(0.2))
 sections.forEach(section => sectionObserver.observe(section));

@@ -12,20 +12,20 @@ function init() {
    btnScrollTop.classList.add('u-hidden-left');
 }
 
-init();
-
-const toggleBtnScrollTop = bool => {
+function toggleBtnScrollTop(bool) {
    btnScrollTop.classList[bool ? 'remove' : 'add']('u-hidden-left');
 }
-const toggleRevealIntro = bool => {
+
+function toggleRevealIntro(bool) {
    targetElems.forEach(elem => 
       elem.classList[bool ? 'remove' : 'add']('u-hidden-down'));
 }
-
 function handleOberveHeader(entries, observer) {
    const [entry] = entries;
    toggleRevealIntro(!entry.isIntersecting)
    toggleBtnScrollTop(!entry.isIntersecting);
 }
+
+init();
 const headerObserver = new IntersectionObserver(handleOberveHeader, getObserverOptions(0.5))
 headerObserver.observe(header);

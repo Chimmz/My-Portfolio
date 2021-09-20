@@ -26,12 +26,12 @@ section#about-me {
    padding-top: calc(25vh + 20rem);
    padding-inline: 7vw;
    background: $color-gray-lightest;
-   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
    color: rgb(43, 43, 43);
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding-bottom: 20rem;
+   padding-bottom: 30rem;
    overflow: hidden;
    z-index: 2;
 
@@ -45,6 +45,9 @@ section#about-me {
    @include respond(phone) {
       padding-top: calc(35vh + 7rem);
    }
+   @media screen and (max-width: 25em) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+   }
 
    & .heading-1 {
       transition: all 1s;
@@ -55,10 +58,9 @@ section#about-me {
    }
 }
 section#skills {
-   padding-top: 30rem;
-   // border: 1px solid black;
+   // margin-top: -25rem;
+   padding-top: 20rem;
    background: $color-white;
-   // background: $color-gray-light;
    padding-inline: 3vw;
 
    @include respond(tab-portrait) {

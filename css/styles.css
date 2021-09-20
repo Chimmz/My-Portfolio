@@ -190,7 +190,7 @@ body {
     @media (max-width: 37.5em) {
       .header__picture {
         padding: 4rem;
-        transform: translateX(-50%) translateY(-25%) rotate(62deg); } }
+        transform: translateX(-50%) translateY(-25%) rotate(60deg); } }
   .header__photo {
     width: 20rem;
     height: 20rem;
@@ -203,7 +203,7 @@ body {
         height: 18rem;
         aspect-ratio: 1;
         border-radius: 50%;
-        transform: rotate(-62deg); } }
+        transform: rotate(-60deg); } }
 
 .footer {
   font-size: 1.3rem;
@@ -260,12 +260,12 @@ section#about-me {
   padding-top: calc(25vh + 20rem);
   padding-inline: 7vw;
   background: #f7f7f7;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   color: #2b2b2b;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20rem;
+  padding-bottom: 30rem;
   overflow: hidden;
   z-index: 2; }
   @media (max-width: 75em) {
@@ -278,13 +278,16 @@ section#about-me {
   @media (max-width: 37.5em) {
     section#about-me {
       padding-top: calc(35vh + 7rem); } }
+  @media screen and (max-width: 25em) {
+    section#about-me {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%); } }
   section#about-me .heading-1 {
     transition: all 1s; }
   section#about-me .short-intro {
     transition: all 1s 0.5s; }
 
 section#skills {
-  padding-top: 30rem;
+  padding-top: 20rem;
   background: #fff;
   padding-inline: 3vw; }
   @media (max-width: 56.25em) {

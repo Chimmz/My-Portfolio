@@ -9,9 +9,7 @@ function init() {
    })
 }
 
-init();
-
-const revealProject = function(entries, observer) {
+function revealProject(entries, observer) {
    const [entry] = entries;
    const {target: project, isIntersecting} = entry;
    const projectDetails = project.querySelector('.project__details');
@@ -23,5 +21,7 @@ const revealProject = function(entries, observer) {
    projectDetails.classList.remove('project__details--hidden')
    projectActions.classList.remove('project__details__actions--hidden');
 }
+
+init();
 const projectObserver = new IntersectionObserver(revealProject, getObserverOptions(0.5))
 allProjects.forEach(project => projectObserver.observe(project))
