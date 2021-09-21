@@ -1,4 +1,4 @@
-export const getObserverOptions = threshold => ({root: null, threshold})
+export const getObserverOptions = (...threshold) => ({root: null, threshold: [...threshold]})
 
 export const underlineHeading = (section, bool) => {
    section

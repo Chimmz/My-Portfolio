@@ -1,6 +1,6 @@
 import { getObserverOptions, underlineHeading } from "./utils.js";
 
-const sections = document.querySelectorAll('section:not(#about-me)')
+const sections = document.querySelectorAll('section:not(#about-me, #myprojects)')
 
 function init() {
    sections.forEach(section => section.classList.add('u-hidden-down'))
@@ -18,5 +18,5 @@ function revealSections(entries, observer) {
 }
 
 init();
-const sectionObserver = new IntersectionObserver(revealSections, getObserverOptions(0.2))
+const sectionObserver = new IntersectionObserver(revealSections, getObserverOptions(0.1))
 sections.forEach(section => sectionObserver.observe(section));

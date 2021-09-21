@@ -287,12 +287,9 @@ section#about-me {
     transition: all 1s 0.5s; }
 
 section#skills {
-  padding-top: 20rem;
+  margin-top: -25rem;
   background: #fff;
   padding-inline: 3vw; }
-  @media (max-width: 56.25em) {
-    section#skills {
-      padding-top: 35rem; } }
 
 section#projects {
   background: #fff;
@@ -423,7 +420,7 @@ a {
       flex-direction: column !important; } }
   .project__tablet {
     flex: 1;
-    padding: 1.2rem;
+    padding: 1.5rem;
     background: #fff;
     box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.09), 0 0 4rem rgba(0, 0, 0, 0.07);
     border-radius: 2rem;

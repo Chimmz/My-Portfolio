@@ -58,13 +58,13 @@ section#about-me {
    }
 }
 section#skills {
-   // margin-top: -25rem;
-   padding-top: 20rem;
+   margin-top: -25rem;
+   // padding-top: 10rem;
    background: $color-white;
    padding-inline: 3vw;
 
    @include respond(tab-portrait) {
-      padding-top: 35rem;
+      // padding-top: 35rem;
    }
 }
 
