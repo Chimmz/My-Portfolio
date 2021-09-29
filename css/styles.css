@@ -116,7 +116,7 @@ body {
 
 .header {
   height: 100vh;
-  padding: 3rem 6.5rem;
+  padding: 3.5rem 6.5rem;
   position: relative;
   z-index: 5; }
   .header::before {
@@ -154,7 +154,7 @@ body {
   .header__navlist {
     display: flex;
     align-items: center;
-    gap: 5vw;
+    gap: 5rem;
     font-size: 1.7rem;
     color: #fff; }
   .header__navlink {
@@ -183,7 +183,7 @@ body {
     position: absolute;
     top: 75%;
     left: 50%;
-    background: #f7f7f7;
+    background: #f4f4f4;
     border-radius: 6rem;
     padding: 4.5rem;
     transform: translateX(-50%) translateY(-25%) rotate(55deg); }
@@ -259,7 +259,7 @@ section#about-me {
   margin-top: -35vh;
   padding-top: calc(25vh + 20rem);
   padding-inline: 7vw;
-  background: #f7f7f7;
+  background: #f4f4f4;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   color: #2b2b2b;
   display: flex;

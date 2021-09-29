@@ -25,15 +25,16 @@
       <link
          href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&display=swap"
          rel="stylesheet"
-      >
+      />
       <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
-      <script src="./src/utils.js" type="module" defer></script>
+      <!-- <script src="./src/utils.js" type="module" defer></script>
       <script src="./src/script.js" type="module" defer></script>
       <script src="./src/header.js" type="module" defer></script>
-      <script src="./src/projects.js" type="module" defer></script>
+      <script src="./src/projects.js" type="module" defer></script> -->
 
-      <link rel="stylesheet" href="/css/styles.css" />
+      <!-- <link rel="stylesheet" href="/css/styles.css" />
+      <link rel="stylesheet" href="/sass/main.scss" /> -->
       <title>Chima Divine | Portfolio site</title>
    </head>
    <body>
@@ -60,29 +61,45 @@
          <section id="about-me">
             <h1
                class="heading-1 u-text-center u-mgb-md"
-               style="transition: transform 1s, opacity 1s">
+               style="transition: transform 1s, opacity 1s"
+            >
                Hi, I'm Chima.
             </h1>
-            <div class="intro u-mgb-xlg" style="transition: transform 1s .5s, opacity 1s .5s;">
-               <p class="parag--bolder u-text-center" style="margin-bottom: 0.4rem;">
-                  I am a <span class="text-primary">frontend</span> web developer
-                  and designer.
+            <div
+               class="intro u-mgb-xlg"
+               style="transition: transform 1s 0.5s, opacity 1s 0.5s"
+            >
+               <p
+                  class="parag--bolder u-text-center"
+                  style="margin-bottom: 0.4rem"
+               >
+                  I am a <span class="text-primary">frontend</span> web
+                  developer and designer.
                </p>
-               <p class="parag u-text-center ">
+               <p class="parag u-text-center">
                   I also have some background in backend and fullstack web
                   development.
                </p>
             </div>
             <div class="mystory u-block-center u-mgb-lg">
-               <img src="/img/grad-photo.jpg" alt="" class="mystory__img">
+               <img src="/img/grad-photo.jpg" alt="" class="mystory__img" />
                <p class="parag u-mgb-sm">
-                  I obtained a BSc. Computer Engineering in North Cyprus in the year 2021 and so, I've been coding for 4 years. I ever look forward to express my passion for the software world by solving problems using the web's technologies to build simple and sweet user interfaces that provide highly good user experiences.
+                  I obtained a BSc. Computer Engineering in North Cyprus in the
+                  year 2021 and so, I've been coding for 4 years. I ever look
+                  forward to express my passion for the software world by
+                  solving problems using the web's technologies to build simple
+                  and sweet user interfaces that provide highly good user
+                  experiences.
                </p>
                <p class="parag">
-                  My main goal is to solve real-world problems as I've been doing all through my journey as a developer. Trust me with writing clean, readable, maintainable and efficient code.
+                  My main goal is to solve real-world problems as I've been
+                  doing all through my journey as a developer. Trust me with
+                  writing clean, readable, maintainable and efficient code.
                </p>
             </div>
-            <a href="#footer" class="btn btn-primary u-btn-center">Get in touch</a>
+            <a href="#footer" class="btn btn-primary u-btn-center"
+               >Get in touch</a
+            >
          </section>
 
          <section id="myskills">
@@ -201,121 +218,172 @@
          <section id="myprojects">
             <h2 class="heading-2 u-text-center u-mgb-lg">My Projects</h2>
             <!-- <div class="myprojects"> -->
-               <div class="project">
-                  <picture class="project__tablet">
-                     <video
-                        src=""
-                        data-src="/videos/helomi-video.mp4"
-                        class="project__tablet__video"
-                        muted
-                        autoplay></video>
-                  </picture>
-                  <div class="project__details">
-                     <h4 class="heading-4 u-mgb-md">Helomi</h4>
-                     <p class="parag u-mgb-sm">
-                        Helomi is a single page chat app that enables users to communicate with one another through text messaging and video calling. I built this robust MERN stack project as my final year project in college.
-                        I chose this project topic because I was really curious about existing apps like Whatsapp performed their real-time functionalities. At the same time I was really fascinated by React. So, I wanted to bring something to life out of the mix of the curiosity and fascination.
-                     </p>
-                     <strong class="parag">Tools and Technologies used:</strong>
-                     <p class="parag u-mgb-md">
-                        React, Redux, Sass, Nodejs, Express, MongoDB, WebRTC, Socket.io, JWT.
-                     </p>
-                     <div class="project__details__actions">
-                        <a href="https://helomi.netlify.app" target="_blank" class="btn btn-primary btn-md">View project live</a>
-                        <!-- <a href="https://github.com/Chimmz/helomi-fullstack" target="_blank" class="btn btn-white btn-md">See GitHub repo</a> -->
-                     </div>
+            <div class="project">
+               <picture class="project__tablet">
+                  <video
+                     data-src="/videos/helomi-video.mp4"
+                     class="project__tablet__video"
+                     muted
+                     autoplay
+                  ></video>
+               </picture>
+               <div class="project__details">
+                  <h4 class="heading-4 u-mgb-md">Helomi</h4>
+                  <p class="parag u-mgb-sm">
+                     Helomi is a single page chat app that enables users to
+                     communicate with one another through text messaging and
+                     video calling. I built this robust MERN stack project as my
+                     final year project in college. I chose this project topic
+                     because I was really curious about existing apps like
+                     Whatsapp performed their real-time functionalities. At the
+                     same time I was really fascinated by React. So, I wanted to
+                     bring something to life out of the mix of the curiosity and
+                     fascination.
+                  </p>
+                  <strong class="parag">Tools and Technologies used:</strong>
+                  <p class="parag u-mgb-md">
+                     React, Redux, Sass, Nodejs, Express, MongoDB, WebRTC,
+                     Socket.io, JWT.
+                  </p>
+                  <div class="project__details__actions">
+                     <a
+                        href="https://helomi.netlify.app"
+                        target="_blank"
+                        class="btn btn-primary btn-md"
+                        >View project live</a
+                     >
+                     <!-- <a href="https://github.com/Chimmz/helomi-fullstack" target="_blank" class="btn btn-white btn-md">See GitHub repo</a> -->
                   </div>
                </div>
-               <div class="project project--flow-reversed">
-                  <picture class="project__tablet">
-                     <video
-                        src=""
-                        data-src="/videos/nisclinic-video.mp4"
-                        class="project__tablet__video"
-                        muted
-                        autoplay></video>
-                  </picture>
-                  <div class="project__details">
-                     <h4 class="heading-4 u-mgb-md">Nisclinic</h4>
-                     <p class="parag u-mgb-sm">
-                        Nisclinic is a static website template for a clinic. I built this in the company where I did my internship.
-                     </p>
-                     <strong class="parag">Tools and Technologies used:</strong>
-                     <p class="parag u-mgb-md">
-                        HTML, CSS / Sass, JavaScript.
-                     </p>
-                     <div class="project__details__actions">
-                        <a href="https://nisclinic.netlify.app" target="_blank" class="btn btn-primary btn-md">View project live</a>
-                        <a href="https://github.com/Chimmz/Nisclinic" target="_blank" class="btn btn-white btn-md">See GitHub repo</a>
-                     </div>
+            </div>
+            <div class="project project--flow-reversed">
+               <picture class="project__tablet">
+                  <video
+                     data-src="/videos/nisclinic-video.mp4"
+                     class="project__tablet__video"
+                     muted
+                     autoplay
+                  ></video>
+               </picture>
+               <div class="project__details">
+                  <h4 class="heading-4 u-mgb-md">Nisclinic</h4>
+                  <p class="parag u-mgb-sm">
+                     Nisclinic is a static website template for a clinic. I
+                     built this in the company where I did my internship.
+                  </p>
+                  <strong class="parag">Tools and Technologies used:</strong>
+                  <p class="parag u-mgb-md">HTML, CSS / Sass, JavaScript.</p>
+                  <div class="project__details__actions">
+                     <a
+                        href="https://nisclinic.netlify.app"
+                        target="_blank"
+                        class="btn btn-primary btn-md"
+                        >View project live</a
+                     >
+                     <a
+                        href="https://github.com/Chimmz/Nisclinic"
+                        target="_blank"
+                        class="btn btn-white btn-md"
+                        >See GitHub repo</a
+                     >
                   </div>
                </div>
-               <div class="project">
-                  <picture class="project__tablet">
-                     <video
-                        src=""
-                        data-src="/videos/dgmmc-vid.mp4"
-                        class="project__tablet__video"
-                        muted
-                        autoplay></video>
-                  </picture>
-                  <div class="project__details">
-                     <h4 class="heading-4 u-mgb-md">DGMMC</h4>
-                     <p class="parag u-mgb-sm">
-                        I built this website for an organization that conducts competitions among high school students annually. This site eased student registration and announcement of results.
-                     </p>
-                     <strong class="parag">Tools and Technologies used:</strong>
-                     <p class="parag u-mgb-md">
-                        HTML, CSS / Sass, JavaScript, Node.js, Express.
-                     </p>
-                     <div class="project__details__actions">
-                        <a href="https://dgmmc.netlify.app" target="_blank" class="btn btn-primary btn-md">View project live</a>
-                        <!-- <a href="" class="btn btn-white btn-md">See GitHub repo</a> -->
-                     </div>
+            </div>
+            <div class="project">
+               <picture class="project__tablet">
+                  <video
+                     data-src="/videos/dgmmc-vid.mp4"
+                     class="project__tablet__video"
+                     muted
+                     autoplay
+                  ></video>
+               </picture>
+               <div class="project__details">
+                  <h4 class="heading-4 u-mgb-md">DGMMC</h4>
+                  <p class="parag u-mgb-sm">
+                     I built this website for an organization that conducts
+                     competitions among high school students annually. This site
+                     eased student registration and announcement of results.
+                  </p>
+                  <strong class="parag">Tools and Technologies used:</strong>
+                  <p class="parag u-mgb-md">
+                     HTML, CSS / Sass, JavaScript, Node.js, Express.
+                  </p>
+                  <div class="project__details__actions">
+                     <a
+                        href="https://dgmmc.netlify.app"
+                        target="_blank"
+                        class="btn btn-primary btn-md"
+                        >View project live</a
+                     >
+                     <!-- <a href="" class="btn btn-white btn-md">See GitHub repo</a> -->
                   </div>
                </div>
-               <div class="project project--flow-reversed">
-                  <picture class="project__tablet">
-                     <video
-                        src=""
-                        data-src="/videos/dad-jokes-vid.mp4"
-                        class="project__tablet__video"
-                        muted
-                        autoplay></video>
-                  </picture>
-                  <div class="project__details">
-                     <h4 class="heading-4 u-mgb-md">Dad Jokes</h4>
-                     <p class="parag u-mgb-sm">
-                        The Dad Jokes app is a simple app that demonstrates fetching from an external API in React. It also emphasizes the lifecycles in React. I built this when I began learning React.
-                     </p>
-                     <strong class="parag">Tools and Technologies used:</strong>
-                     <p class="parag u-mgb-md">
-                        React.
-                     </p>
-                     <div class="project__details__actions">
-                        <a href="https://dad-jokes-project.netlify.app" target="_blank" class="btn btn-primary btn-md">View project live</a>
-                        <a href="https://github.com/Chimmz/dad-jokes" target="_blank" class="btn btn-white btn-md">See GitHub repo</a>
-                     </div>
+            </div>
+            <div class="project project--flow-reversed">
+               <picture class="project__tablet">
+                  <video
+                     data-src="/videos/dad-jokes-vid.mp4"
+                     class="project__tablet__video"
+                     muted
+                     autoplay
+                  ></video>
+               </picture>
+               <div class="project__details">
+                  <h4 class="heading-4 u-mgb-md">Dad Jokes</h4>
+                  <p class="parag u-mgb-sm">
+                     The Dad Jokes app is a simple app that demonstrates
+                     fetching from an external API in React. It also emphasizes
+                     the lifecycles in React. I built this when I began learning
+                     React.
+                  </p>
+                  <strong class="parag">Tools and Technologies used:</strong>
+                  <p class="parag u-mgb-md">React.</p>
+                  <div class="project__details__actions">
+                     <a
+                        href="https://dad-jokes-project.netlify.app"
+                        target="_blank"
+                        class="btn btn-primary btn-md"
+                        >View project live</a
+                     >
+                     <a
+                        href="https://github.com/Chimmz/dad-jokes"
+                        target="_blank"
+                        class="btn btn-white btn-md"
+                        >See GitHub repo</a
+                     >
                   </div>
                </div>
+            </div>
             <!-- </div> -->
          </section>
          <footer class="footer" id="footer">
             <div class="footer__socicons">
-               <a href="https://www.linkedin.com/in/chima-divine-orji" target="_blank">
-                  <span class="iconify" data-icon="fa-brands:linkedin-in"></span>
+               <a
+                  href="https://www.linkedin.com/in/chima-divine-orji"
+                  target="_blank"
+               >
+                  <span
+                     class="iconify"
+                     data-icon="fa-brands:linkedin-in"
+                  ></span>
                </a>
                <a href="https://github.com/Chimmz" target="_blank">
                   <span class="iconify" data-icon="fa-brands:github"></span>
                </a>
-               <a href="https://www.facebook.com/chima.endmond/" target="_blank">
+               <a
+                  href="https://www.facebook.com/chima.endmond/"
+                  target="_blank"
+               >
                   <span class="iconify" data-icon="fa-brands:facebook-f"></span>
                </a>
                <a href="https://wa.me/+905338319606" target="_blank">
                   <span class="iconify" data-icon="fa-brands:whatsapp"></span>
                </a>
             </div>
-            <span class="copyr">Chima Divine. © Copyright 2021. All rights reserved.</span>
+            <span class="copyr"
+               >Chima Divine. © Copyright 2021. All rights reserved.</span
+            >
          </footer>
 
          <button

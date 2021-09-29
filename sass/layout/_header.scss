@@ -1,6 +1,6 @@
 .header {
    height: 100vh;
-   padding: 3rem 6.5rem;
+   padding: 3.5rem 6.5rem;
    position: relative;
    z-index: 5;
 
@@ -16,7 +16,7 @@
       );
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
    }
-   @media screen and (max-width: 34.375em){
+   @media screen and (max-width: 34.375em) {
       padding-top: 7rem;
    }
 
@@ -25,7 +25,7 @@
       align-items: center;
       justify-content: space-between;
 
-      @media screen and (max-width: 34.375em){
+      @media screen and (max-width: 34.375em) {
          flex-direction: column;
          justify-content: center;
          gap: 4rem;
@@ -53,7 +53,7 @@
    &__navlist {
       display: flex;
       align-items: center;
-      gap: 5vw;
+      gap: 5rem;
       font-size: 1.7rem;
       color: $color-white;
    }
@@ -92,7 +92,7 @@
       position: absolute;
       top: 75%;
       left: 50%;
-      background: $color-gray-lightest;
+      background: $color-gray-lighter;
       border-radius: 6rem;
       padding: 4.5rem;
       transform: translateX(-50%) translateY(-25%) rotate(55deg);
@@ -109,7 +109,9 @@
 
       @include respond(phone) {
          @include make-circle(18rem);
-         transform: rotate(-60deg); // To negate rotation effect caused by picture at this breakpoint
+         transform: rotate(
+            -60deg
+         ); // To negate rotation effect caused by picture at this breakpoint
       }
    }
 }
