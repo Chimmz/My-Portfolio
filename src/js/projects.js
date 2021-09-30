@@ -43,6 +43,6 @@ function revealProject(entries, observer) {
 init();
 const projectObserver = new IntersectionObserver(
    revealProject,
-   getObserverOptions(0.02, 0.5)
+   getObserverOptions(0.1, 0.5) // 0.02 for lazy-loading
 );
 allProjects.forEach(project => projectObserver.observe(project));
