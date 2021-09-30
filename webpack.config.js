@@ -2,7 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-   entry: ['./src/script.js', './index.html'],
+   entry: ['./src/js/script.js'],
    module: {
       rules: [
          {
@@ -12,12 +12,21 @@ module.exports = {
          {
             test: /\.html$/,
             use: ['html-loader']
+         },
+         {
+            test: /\.(jpg|jpeg|png|jiff|mp4)$/,
+            use: [
+               {
+                  loader: 'file-loader',
+                  options: {
+                     name: '[name].[ext]',
+                     outputPath: 'assets/'
+                     // publicPath: 'assets/'
+                  }
+               }
+            ]
          }
       ]
-   },
-   output: {
-      path: path.join(__dirname, 'build'),
-      filename: 'bundle.js'
    },
    plugins: [new HTMLWebpackPlugin({ template: './index.html' })],
    mode: 'development',

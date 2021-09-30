@@ -4,9 +4,10 @@ const webpackCommonConfig = require('./webpack.config');
 
 module.exports = merge(webpackCommonConfig, {
    output: {
-      path: path.join(__dirname, 'build'),
-      filename: 'bundle.js'
+      filename: 'bundle.js',
+      path: path.join(__dirname, 'build')
+      // publicPath: '/build'
    },
-   mode: 'production',
-   devtool: false
+
+   mode: 'production'
 });
