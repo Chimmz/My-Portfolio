@@ -4,7 +4,8 @@
    "description": "",
    "scripts": {
       "compile:sass": "node-sass sass/main.scss css/styles.css -w",
-      "start:parcel": "parcel index.html",
+      "parcel:start": "parcel index.html",
+      "parcel:build": "parcel build index.html",
       "start": "webpack-dev-server --config webpack.dev.js --open",
       "build": "webpack --config webpack.prod.js"
    },
